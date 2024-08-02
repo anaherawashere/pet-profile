@@ -4,7 +4,7 @@ import Nav from "./Nav"
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <Nav />
       <h1>App</h1>
       <p>React development has begun!</p>

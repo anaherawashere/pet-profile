@@ -5,12 +5,12 @@ import {
 } from 'react-router-dom'
 
 import App from './components/App'
-import SignupForm from './components/SignupForm'
 import ProfilePage from './components/ProfilePage'
+import PetDetails from './components/Form-PetDetails'
 
 const routes = createRoutesFromElements(
   <Route path="/" element={<App />}>
-    <Route index element={<SignupForm />} />
+    <Route index element={<PetDetails />} />
     <Route path="profile-page/:name" element={<ProfilePage />} />
   </Route>,
 )
