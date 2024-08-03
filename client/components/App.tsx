@@ -1,14 +1,15 @@
-import { Outlet } from "react-router-dom"
+import { Outlet } from 'react-router-dom'
 
-import Nav from "./Nav"
+import Nav from './Nav'
+import PetDetails from './form-signup/Step1-Details'
 
 function App() {
   return (
     <div className="container">
       <Nav />
-      <h1>App</h1>
-      <p>React development has begun!</p>
-      <p>Heyyy</p>
+      <div className="banner">
+        <h1>Pet Profiles</h1>
+      </div>
       <Outlet />
     </div>
   )

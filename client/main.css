@@ -25,13 +25,24 @@ body {
   justify-content: center;
 }
 
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 3em;
+}
+
 form {
   /* background: #fff; */
   width: 100vw;
   max-width: 30em;
   border-radius: 20px;
   /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-  padding: 3em 2em;
+  padding: 2em 2em;
 }
 
 form h2,

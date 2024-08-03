@@ -25,7 +25,7 @@ const personality: Personality = {
       name: 'traits',
       placeholder: '',
       options: [
-        'Busy', 'Lazy', 'Goofy', 'Gorgeous', 'Brat', 'Loyal', 'Playful', 'Adventurous', 'Foodie', 'Snorer', 'Crazy', 'Smarty pants', 'Main character', 'Floofy',
+        'Busy', 'Lazy', 'Goofy', 'Gorgeous', 'Brat', 'Loyal', 'Playful', 'Adventurous', 'Foodie', 'Snorer', 'Crazy', 'Floofy',
       ],
     },
 }
