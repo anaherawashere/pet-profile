@@ -23,3 +23,5 @@ export interface PersonalityValues {
   crazy: string
   floofy: string
 }
+
+export type TextInput = string

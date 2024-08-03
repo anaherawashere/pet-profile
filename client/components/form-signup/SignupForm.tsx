@@ -9,7 +9,6 @@ function SignupForm() {
 
   return (
     <div className="container">
-      <h1>Sign up</h1>
       <Outlet/>
     </div>
   )
