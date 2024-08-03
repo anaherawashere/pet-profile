@@ -7,9 +7,6 @@ function App() {
   return (
     <div className="container">
       <Nav />
-      <div className="banner">
-        <h1>Pet Profiles</h1>
-      </div>
       <Outlet />
     </div>
   )

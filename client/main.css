@@ -25,6 +25,26 @@ body {
   justify-content: center;
 }
 
+nav {
+  display: flex;
+  gap: 1.5em;
+  justify-content: flex-end;
+  padding: 1em 2.5em;
+  margin-top: 1em;
+  /* background: #FCEDE4; */
+  border-radius: 200em;
+  font-weight: 600;
+}
+
+a {
+  color: #0a1520;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
 .banner {
   display: flex;
   flex-direction: column;
