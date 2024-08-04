@@ -2,12 +2,13 @@ import { useParams } from 'react-router-dom'
 import { useState } from 'react'
 
 import PetName from './profile-components/PetName'
-import { DetailValues } from './models/formFields'
+import { Step1Values } from './form-signup/formFieldTypes'
 
 function ProfilePage() {
-  const { name } = useParams<{ name: string }>()
+  const { profileName } = useParams<string>()
+  const name = profileName?.charAt(0).toUpperCase() + profileName.slice(1)
 
-  const [data, setData] = useState({
+  const [data, setData] = useState<Step1Values>({
     petName: '',
     dateofBirth: '',
     sex: '',
@@ -15,8 +16,11 @@ function ProfilePage() {
     species: '',
   })
 
-  const handleAdd = (obj: DetailValues) => {
-    setData({
+  const handleAdd = (obj: Step1Values) => {
+    if (obj.petName === '') {
+      return 'Error: No data passed'
+    }
+    return setData({
       petName: obj.petName,
       dateofBirth: obj.dateofBirth,
       sex: obj.sex,
@@ -29,7 +33,8 @@ function ProfilePage() {
     <div className="container">
       <h1>Kia ora, {name} 👋</h1>
       <h2>Welcome to your profile</h2>
-      <PetName petDetails={data.petName} />
+      <PetName petDetails={`${data.petName} 🐾`} />
+      {handleAdd(data)}
     </div>
   )
 }

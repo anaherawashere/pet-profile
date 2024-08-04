@@ -1,7 +1,7 @@
-import { DetailValues, TextInput } from "../models/formFields"
+import { DetailValues, TextInput } from '../form-signup/formFieldTypes'
 
-function PetName({petDetails}:  DetailValues) {
-  return(
+function PetName({ petDetails }: DetailValues) {
+  return (
     <>
       <h2>Pet name {petDetails.petName}</h2>
     </>

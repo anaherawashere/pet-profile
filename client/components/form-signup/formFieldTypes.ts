@@ -1,4 +1,4 @@
-export interface DetailValues {
+export interface Step1Values {
   petName: string
   dateofBirth: string
   sex: string
@@ -6,7 +6,7 @@ export interface DetailValues {
   species: string
 }
 
-export interface PersonalityValues {
+export interface Step2Values {
   bio: string
   faveFood: string
   traits: string

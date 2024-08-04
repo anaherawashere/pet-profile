@@ -7,7 +7,7 @@ function AllProfiles() {
     <div className="container">
       <h1>All Profiles component</h1>
       {profiles.map((profile) => (
-        <Link key={profile} to={`/profiles/${profile}`}>
+        <Link key={profile} to={`/profiles/`+ profile.toLowerCase()}>
           Profile {profile}
         </Link>
       ))}
