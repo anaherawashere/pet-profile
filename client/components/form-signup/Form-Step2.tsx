@@ -27,7 +27,7 @@ const initialFieldValues: Step2Values = {
   floofy: '',
 }
 
-function FormStep2() {
+export default function FormStep2() {
   const [form, setForm] = useState<Step2Values>(initialFieldValues)
 
   function handleChange(
@@ -105,5 +105,3 @@ function FormStep2() {
     </div>
   )
 }
-
-export default FormStep2

@@ -1,5 +1,6 @@
 export const TextField = ({ handleChange, form, fields, type }) => (
   <div className="form-text" key={type}>
+    <label id={fields[type].name} htmlFor={fields[type].name}>{type}</label>
     <input
       onChange={handleChange}
       value={form[fields[type].name] || ''}
@@ -13,6 +14,7 @@ export const TextField = ({ handleChange, form, fields, type }) => (
 
 export const TextAreaField = ({ handleChange, form, fields, type }) => (
   <div className="form-text" key={type}>
+    <label id={fields[type].name} htmlFor={fields[type].name}>{type}</label>
     <textarea
       name={fields[type].name}
       id={fields[type].name}
@@ -26,8 +28,9 @@ export const TextAreaField = ({ handleChange, form, fields, type }) => (
 
 export const CheckboxField = ({ handleChange, fields, type }) => (
   <div className="form-options" key={type}>
+    <label id={fields[type].name} htmlFor={fields[type].name}>{type}</label>
     <div className="form-options__items">
-      {fields[type].options.map((option) => (
+      {fields[type].options.map((option: string) => (
         <div className="button--option" key={option}>
           <input
             onChange={handleChange}
@@ -35,7 +38,7 @@ export const CheckboxField = ({ handleChange, fields, type }) => (
             name={option}
             id={option}
           />
-          <label htmlFor={option}>{option}</label>
+          <label id={option} htmlFor={option}>{option}</label>
         </div>
       ))}
     </div>
@@ -44,6 +47,7 @@ export const CheckboxField = ({ handleChange, fields, type }) => (
 
 export const SelectField = ({ handleChange, form, fields, type }) => (
   <div className="form-text" key={type}>
+    <label id={fields[type].name} htmlFor={fields[type].name}>{type}</label>
     <select
       id={fields[type].name}
       name={fields[type].name}
@@ -51,7 +55,7 @@ export const SelectField = ({ handleChange, form, fields, type }) => (
       onChange={handleChange}
     >
       <option value="placeholder">Select an option</option>
-      {fields[type].options.map((option) => (
+      {fields[type].options.map((option: string) => (
         <option key={option} value={option}>
           {option}
         </option>

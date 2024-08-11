@@ -17,7 +17,7 @@ const initialFieldValues: Step1Values = {
   species: '',
 }
 
-function FormStep1() {
+export default function FormStep1() {
   const [form, setForm] = useState<Step1Values>(initialFieldValues)
 
   function handleChange(
@@ -85,15 +85,13 @@ function FormStep1() {
   }
 
   return (
-    <>
+    <div key='step-one'>
       <form onSubmit={handleSubmit}>
         <h2>Create a profile for your pet</h2>
         <p>Start with a few basic fields</p>
         {handleFields()}
         <button type="submit">Get started</button>
       </form>
-    </>
+    </div>
   )
 }
-
-export default FormStep1

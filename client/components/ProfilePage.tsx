@@ -4,6 +4,7 @@ import { useState } from 'react'
 import PetName from './profile-components/PetName'
 import { Step1Values } from './form-signup/formFieldTypes'
 
+
 function ProfilePage() {
   const { profileName } = useParams<string>()
   const name = profileName?.charAt(0).toUpperCase() + profileName.slice(1)
